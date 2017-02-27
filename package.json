@@ -2,7 +2,7 @@
   "name": "krphp",
   "version": "0.0.0",
   "private": true,
-  "author": "hwi",
+  "author": "devhwi",
   "description": "krphp-dev group's hubot",
   "dependencies": {
     "hubot": "^2.19.0",
