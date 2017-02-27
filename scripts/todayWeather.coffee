@@ -10,6 +10,7 @@ weather_version = config.weather.version
 
 module.exports = (robot) ->
   robot.hear /오늘의날씨 (.*)$/i, (msg) ->
+    console.log(msg.match[1])
     location = decodeURIComponent(unescape(msg.match[1]))
     getGeocode(msg, location)
     .then (geoCode) ->
@@ -17,7 +18,7 @@ module.exports = (robot) ->
     .catch ->
         msg.send '지역 불러오기를 실패하였습니다.'
 
-# getGeocode by Google
+# getGeocode by Google map
 getGeocode = (msg, location) ->
   deferred= q.defer()
   msg.http("https://maps.googleapis.com/maps/api/geocode/json")
