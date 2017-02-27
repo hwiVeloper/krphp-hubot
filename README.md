@@ -1,4 +1,6 @@
 # krphp hubot
+[![Slack](https://img.shields.io/badge/Slack-krphp--dev-blue.svg)](https://krphp-dev.slack.com)
+[![Travis](https://img.shields.io/travis/rust-lang/rust.svg)]()
 
 krphp-dev는 한국 php 개발자 모임 슬랙 그룹입니다. 이 [Hubot][hubot]은 슬랙 그룹을 위해 만들어졌습니다. 심심풀이로 만들어보았습니다.
 [Heroku][heroku]에 빌드하여 작동하고 있습니다.
