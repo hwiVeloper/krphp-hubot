@@ -22,6 +22,15 @@ krphp-dev는 한국 php 개발자 모임 슬랙 그룹입니다. 이 [Hubot][hub
 
 # 우리동네의 오늘의 날씨 알아보기
 @krphp 오늘의날씨 <동네이름(읍면동/시군구 단위>
+
+# diagnostics
+@krphp 핑
+@krphp 생존신고 || 생존확인 || 살아있니
+
+# 간단한 대화
+@krphp 메롱
+@krphp 안녕
+@krphp 사랑해
 ```
 
 ## Local에서 실행하는 방법
