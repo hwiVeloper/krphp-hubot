@@ -22,5 +22,8 @@
   },
   "engines": {
     "node": "0.10.x"
+  },
+  "devDependencies": {
+    "jake": "^8.0.15"
   }
 }
