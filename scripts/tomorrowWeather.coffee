@@ -9,7 +9,7 @@ weather_api_key = config.weather.key
 weather_version = config.weather.version
 
 module.exports = (robot) ->
-  robot.respond /오늘의날씨 (.*)$/i, (msg) ->
+  robot.respond /내일의날씨 (.*)$/i, (msg) ->
     location = decodeURIComponent(unescape(msg.match[1]))
     getGeocode(msg, location)
     .then (geoCode) ->
@@ -36,6 +36,7 @@ getGeocode = (msg, location) ->
         deferred.reject(err)
   return deferred.promise
 
+# 내일의 날씨
 # getWeather by api
 getWeather = (msg, geoCode, location) ->
   msg.http("http://apis.skplanetx.com/weather/summary?version=#{weather_version}&lat=#{geoCode.lat}&lon=#{geoCode.lng}&appKey=#{weather_api_key}")
@@ -46,9 +47,9 @@ getWeather = (msg, geoCode, location) ->
       city = response.weather.summary[0].grid.city
       county = response.weather.summary[0].grid.county
 
-      todaySky = response.weather.summary[0].today.sky.name
-      todayMaxTmp = Math.floor(response.weather.summary[0].today.temperature.tmax)
-      todayMinTmp = Math.floor(response.weather.summary[0].today.temperature.tmin)
+      tomorrowSky = response.weather.summary[0].tomorrow.sky.name
+      tomorrowMaxTmp = Math.floor(response.weather.summary[0].tomorrow.temperature.tmax)
+      tomorrowMinTmp = Math.floor(response.weather.summary[0].tomorrow.temperature.tmin)
 
       # time = moment().add(9, 'h').format('MM월 DD일 HH시')
-      msg.send "오늘의 날씨입니다.:wink:\n#{city} #{county}의 하늘은 '#{todaySky}'입니다.\n오늘 최저 기온은 #{todayMinTmp}도씨, 최고 기온은 #{todayMaxTmp}도씨 되겠습니다.\n감사합니다.:hugging_face:"
+      msg.send "내일의 날씨입니다.:wink:\n#{city} #{county}의 하늘은 '#{tomorrowSky}'입니다.\n최저 기온은 #{tomorrowMinTmp}도씨, 최고 기온은 #{tomorrowMaxTmp}도씨 되겠습니다.\n감사합니다:hugging_face:"
