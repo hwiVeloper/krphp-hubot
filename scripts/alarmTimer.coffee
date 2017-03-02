@@ -12,7 +12,7 @@ module.exports = (robot) ->
   helloOffice = new cronJob('0 0 9 * * *', lunchTime(robot), null, true, "Asia/Seoul")
   lunchTime.start()
   # test
-  test = new cronJob('0 25 14 * * *', test(robot), null, true, "Asia/Seoul")
+  test = new cronJob('0 27 14 * * *', test(robot), null, true, "Asia/Seoul")
   test.start()
 
 # 0시에 WakeUpDarkNight
