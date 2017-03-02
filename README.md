@@ -38,6 +38,9 @@ krphp-dev는 한국 php 개발자 모임 슬랙 그룹입니다. 이 [Hubot][hub
 @krphp 메롱
 @krphp 안녕
 @krphp 사랑해
+
+# 비서 역할
+@krphp 오늘 오후 6시에 퇴근이라고 알려줘
 ```
 
 ## Local에서 실행하는 방법
