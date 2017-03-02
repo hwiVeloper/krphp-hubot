@@ -3,17 +3,14 @@ cronJob = require('cron').CronJob
 
 module.exports = (robot) ->
   # 잘자요
-  goodNight = new cronJob('0 0 0 * * *', goodNight(robot), null, true, "Asia/Seoul")
-  goodNight.start()
+  goodNightJob = new cronJob('0 0 0 * * *', goodNight(robot), null, true, "Asia/Seoul")
+  goodNightJob.start()
   # 점심시간
-  lunchTime = new cronJob('0 0 12 * * *', lunchTime(robot), null, true, "Asia/Seoul")
-  lunchTime.start()
+  lunchTimeJob = new cronJob('0 0 12 * * *', lunchTime(robot), null, true, "Asia/Seoul")
+  lunchTimeJob.start()
   # 출근
-  helloOffice = new cronJob('0 0 9 * * *', lunchTime(robot), null, true, "Asia/Seoul")
-  lunchTime.start()
-  # test
-  test = new cronJob('0 27 14 * * *', test(robot), null, true, "Asia/Seoul")
-  test.start()
+  helloOfficeJob = new cronJob('0 0 9 * * *', lunchTime(robot), null, true, "Asia/Seoul")
+  lunchTimeJob.start()
 
 # 0시에 WakeUpDarkNight
 goodNight = (robot) ->
@@ -26,6 +23,3 @@ lunchTime = (robot) ->
 # 출근시간에 helloOffice
 helloOffice = (robot) ->
   -> robot.messageRoom '#_general', '오늘 하루도 화이팅! ;)'
-
-test = (robot) ->
-  -> robot.messageRoom '#_general', 'cron job test'
