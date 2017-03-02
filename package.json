@@ -20,7 +20,8 @@
     "hubot-slack": "^4.3.2",
     "moment": "^2.17.1",
     "q": "^1.4.1",
-    "hubot-cron": ">= 0.1.0"
+    "hubot-cron": ">= 0.1.0",
+    "sugar": "^1.4.1"
   },
   "engines": {
     "node": "0.10.x"
