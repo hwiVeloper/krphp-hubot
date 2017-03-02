@@ -11,9 +11,6 @@ module.exports = (robot) ->
   # 출근
   helloOfficeJob = new cronJob('0 0 9 * * *', helloOffice(robot), null, true, "Asia/Seoul")
   helloOfficeJob.start()
-  # test
-  testJob = new cronJob('0 49 14 * * *', test(robot), null, true, "Asia/Seoul")
-  testJob.start()
 
 # 0시에 goodNightJob
 goodNight = (robot) ->
@@ -24,5 +21,3 @@ lunchTime = (robot) ->
 # 출근시간에 helloOfficeJob
 helloOffice = (robot) ->
   -> robot.messageRoom '#general', '오늘 하루도 화이팅! ;)'
-test = (robot) ->
-  -> robot.messageRoom '#general', 'test입니다 :)'
