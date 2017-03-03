@@ -5,8 +5,8 @@ cronJob = require('cron').CronJob
 moment.locale('ko');
 
 module.exports = (robot) ->
-  # 정시
-  exactTimeJob = new cronJob('0 0 * * * *', exactTime(robot), null, true, "Asia/Seoul")
+  # 정시 (자는 시간에는 울리지 않는다.)
+  exactTimeJob = new cronJob('0 0 8-23 * * *', exactTime(robot), null, true, "Asia/Seoul")
   exactTimeJob.start()
   # 잘자요
   goodNightJob = new cronJob('0 0 0 * * *', goodNight(robot), null, true, "Asia/Seoul")
