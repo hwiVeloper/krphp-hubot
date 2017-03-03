@@ -17,6 +17,9 @@ module.exports = (robot) ->
   # 출근(평일)
   helloOfficeJob = new cronJob('0 0 9 * * 2-6', helloOffice(robot), null, true, "Asia/Seoul")
   helloOfficeJob.start()
+  # 정시
+  exactTimeJob = new cronJob('0 0 * * * *', exactTime(robot), null, true, "Asia/Seoul")
+  exactTimeJob.start()
 
 # 0시에 goodNightJob
 goodNight = (robot) ->
@@ -30,3 +33,6 @@ lunchTime = (robot) ->
 # 출근시간에 helloOfficeJob
 helloOffice = (robot) ->
   -> robot.messageRoom '#general', '오늘 하루도 화이팅! ;)'
+# 매 정시마다 exactTime
+exactTime = (robot) ->
+  -> robot.messageRoom '#general', ":alarm_clock: #{moment().format('a h시')}를 알립니다."
