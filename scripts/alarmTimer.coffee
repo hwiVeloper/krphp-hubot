@@ -5,6 +5,9 @@ cronJob = require('cron').CronJob
 moment.locale('ko');
 
 module.exports = (robot) ->
+  # 정시
+  exactTimeJob = new cronJob('0 0 * * * *', exactTime(robot), null, true, "Asia/Seoul")
+  exactTimeJob.start()
   # 잘자요
   goodNightJob = new cronJob('0 0 0 * * *', goodNight(robot), null, true, "Asia/Seoul")
   goodNightJob.start()
@@ -17,10 +20,10 @@ module.exports = (robot) ->
   # 출근(평일)
   helloOfficeJob = new cronJob('0 0 9 * * 2-6', helloOffice(robot), null, true, "Asia/Seoul")
   helloOfficeJob.start()
-  # 정시
-  exactTimeJob = new cronJob('0 0 * * * *', exactTime(robot), null, true, "Asia/Seoul")
-  exactTimeJob.start()
 
+# 매 정시마다 exactTime
+exactTime = (robot) ->
+  -> robot.messageRoom '#general', ":alarm_clock: #{moment().format('a h시')}를 알립니다."
 # 0시에 goodNightJob
 goodNight = (robot) ->
   -> robot.messageRoom '#general', '오늘 하루 고생 많았어요. 잘자요~'
@@ -33,6 +36,3 @@ lunchTime = (robot) ->
 # 출근시간에 helloOfficeJob
 helloOffice = (robot) ->
   -> robot.messageRoom '#general', '오늘 하루도 화이팅! ;)'
-# 매 정시마다 exactTime
-exactTime = (robot) ->
-  -> robot.messageRoom '#general', ":alarm_clock: #{moment().format('a h시')}를 알립니다."
