@@ -13,7 +13,7 @@ module.exports = (robot) ->
   exactTimeJob = new cronJob('0 0 8-23 * * 1-5', exactTime(robot), null, true, "Asia/Seoul")
   exactTimeJob.start()
   # 잘자요
-  goodNightJob = new cronJob('0 0 0 * * *', goodNight(robot), null, true, "Asia/Seoul")
+  goodNightJob = new cronJob('0 0 0 * * 1-5', goodNight(robot), null, true, "Asia/Seoul")
   goodNightJob.start()
   # 잘자요(일요일 끝)
   goodNightSundayJob = new cronJob('0 0 0 * * 1', goodNightSunday(robot), null, true, "Asia/Seoul")
