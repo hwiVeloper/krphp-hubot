@@ -13,7 +13,7 @@ module.exports = (robot) ->
     msg.send "정시알림을 중지합니다. 재개하려면 정시알림 (재개|해줘|해) 라고 말씀해주세요. :wink:"
     exactTimeJob.stop()
   robot.respond /정시알림 (재개|해줘|해)/i, (msg) ->
-    msg.send "정시알림을 중지합니다. 재개하려면 정시알림 (재개|해줘|해) 라고 말씀해주세요. :wink:"
+    msg.send "정시알림을 시작합니다. 그만하려면 정시알림 (중지|하지마|그만|그만해) 라고 말씀해주세요. :wink:"
     exactTimeJob.start()
   # 정시 (주말 & 자는 시간에는 울리지 않는다.)
   exactTimeJob = new cronJob('0 0 8-23 * * 1-5', exactTime(robot), null, true, "Asia/Seoul")
