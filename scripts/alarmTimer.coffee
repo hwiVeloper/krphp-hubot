@@ -17,7 +17,6 @@ module.exports = (robot) ->
     exactTimeJob.start()
   # 정시 (주말 & 자는 시간에는 울리지 않는다.)
   exactTimeJob = new cronJob('0 0 8-23 * * 1-5', exactTime(robot), null, true, "Asia/Seoul")
-  exactTimeJob.start()
   # 잘자요
   goodNightJob = new cronJob('0 0 0 * * 1-5', goodNight(robot), null, true, "Asia/Seoul")
   goodNightJob.start()
