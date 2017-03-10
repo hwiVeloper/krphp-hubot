@@ -7,6 +7,9 @@ module.exports = (robot) ->
   robot.hear /메뉴추가 (.*)/i, (msg) ->
     saveData(msg, msg.match[1])
 
+  robot.hear /메뉴리스트/i, (msg) ->
+    getMenuTable(msg)
+
   getData = (msg) ->
     fb.once "value", (data) ->
       objectKeys = Object.keys(data.val())
@@ -18,3 +21,11 @@ module.exports = (robot) ->
   saveData = (msg, data) ->
     fb.push(data).then ->
       msg.send "메뉴 #{data} 추가 완료!"
+
+  getMenuTable = (msg) ->
+    fb.once "value", (data) ->
+      objectKeys = Object.keys(data.val())
+      msg.send "----- 메뉴리스트 -----"
+      data.forEach (data)->
+        msg.send "#{data.val()}"
+      msg.send "----------------------"
