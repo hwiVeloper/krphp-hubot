@@ -15,7 +15,7 @@ module.exports = (robot) ->
     .then (geoCode) ->
         getWeather(msg, geoCode, location)
     .catch (err)->
-        msg.send '지역 불러오기를 실패하였습니다.'
+        msg.send '그런 지역은 없어요. :cry:'
 
 # getGeocode by Google map
 getGeocode = (msg, location) ->
