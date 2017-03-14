@@ -26,6 +26,9 @@ module.exports = (robot) ->
   # 점심시간(평일)
   lunchTimeJob = new cronJob('0 0 12 * * 1-5', lunchTime(robot), null, true, "Asia/Seoul")
   lunchTimeJob.start()
+  # 점심시간 후(평일)
+  recommendMenuJob = new cronJob('0 0 13 * * 1-5', recommendMenu(robot), null, true, "Asia/Seoul")
+  recommendMenuJob.start()
   # 출근(평일)
   helloOfficeJob = new cronJob('0 0 9 * * 1-5', helloOffice(robot), null, true, "Asia/Seoul")
   helloOfficeJob.start()
@@ -45,6 +48,9 @@ goodNightSunday = (robot) ->
 # 점심시간에 lunchTimeJob
 lunchTime = (robot) ->
   -> robot.messageRoom '#general', '점심시간입니다! 맛점하세요 :heart_eyes::meat_on_bone:'
+# 점심 먹고 메뉴 추천
+recommendMenu = (robot) ->
+  -> robot.messageRoom '#general', '점심 맛있게 드셨나요? :kissing_cat: `메뉴추가 메뉴이름`을 통해 메뉴판을 채워주세요!'
 # 출근시간에 helloOfficeJob
 helloOffice = (robot) ->
   -> robot.messageRoom '#general', '오늘 하루도 화이팅! :wink:'
