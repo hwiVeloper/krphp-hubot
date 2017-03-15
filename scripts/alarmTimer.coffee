@@ -9,14 +9,14 @@ moment.locale('ko');
 # 1-5: 평일
 
 module.exports = (robot) ->
-  robot.respond /정시알림 (중지|하지마|그만|그만해)/i, (msg) ->
-    msg.send "정시알림을 중지합니다. 재개하려면 정시알림 (재개|해줘|해) 라고 말씀해주세요. :wink:"
-    exactTimeJob.stop()
-  robot.respond /정시알림 (재개|해줘|해)/i, (msg) ->
-    msg.send "정시알림을 시작합니다. 그만하려면 정시알림 (중지|하지마|그만|그만해) 라고 말씀해주세요. :wink:"
-    exactTimeJob.start()
+  # robot.respond /정시알림 (중지|하지마|그만|그만해)/i, (msg) ->
+  #   msg.send "정시알림을 중지합니다. 재개하려면 정시알림 (재개|해줘|해) 라고 말씀해주세요. :wink:"
+  #   exactTimeJob.stop()
+  # robot.respond /정시알림 (재개|해줘|해)/i, (msg) ->
+  #   msg.send "정시알림을 시작합니다. 그만하려면 정시알림 (중지|하지마|그만|그만해) 라고 말씀해주세요. :wink:"
+  #   exactTimeJob.start()
   # 정시 (주말 & 자는 시간에는 울리지 않는다.)
-  exactTimeJob = new cronJob('0 0 8-23 * * 1-5', exactTime(robot), null, true, "Asia/Seoul")
+  # exactTimeJob = new cronJob('0 0 8-23 * * 1-5', exactTime(robot), null, true, "Asia/Seoul")
   # 잘자요
   goodNightJob = new cronJob('0 0 0 * * 1-5', goodNight(robot), null, true, "Asia/Seoul")
   goodNightJob.start()
@@ -37,9 +37,9 @@ module.exports = (robot) ->
   itsFridayJob.start()
 
 # 매 정시마다 exactTime
-exactTime = (robot) ->
-  -> robot.messageRoom '#general', ":alarm_clock: #{moment().format('a h시')}를 알립니다."
-# 0시에 goodNightJob
+# exactTime = (robot) ->
+#   -> robot.messageRoom '#general', ":alarm_clock: #{moment().format('a h시')}를 알립니다."
+# # 0시에 goodNightJob
 goodNight = (robot) ->
   -> robot.messageRoom '#general', '오늘 하루 고생 많았어요. 잘자요~ :sleeping:'
 # 일요일 0시에 goodNightSunday
