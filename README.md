@@ -18,7 +18,7 @@ krphp-dev는 한국 php 개발자 모임 슬랙 그룹입니다. 이 [Hubot][hub
 ## 슬랙에서 실행하기
 
 ```
-## Cron Job 에 의한 타이머
+# Cron Job 에 의한 타이머
 # general 채널에서 다음 시간마다 메세지를 날려줍니다.
   * 출근 : 09시
   * 점심 : 12시
@@ -42,6 +42,13 @@ krphp-dev는 한국 php 개발자 모임 슬랙 그룹입니다. 이 [Hubot][hub
 
 # 비서 역할
 @krphp 오늘 오후 6시에 퇴근이라고 알려줘
+
+# 결정요정
+결정요정! <리스트1> <리스트2> <리스트3> ...
+=> 리스트 중 하나를 선택해준다.
+
+<...> ..<까> ..<까> ?
+ex) 오늘밤 게임할까 말까? => 해, 하지마 등의 답을 준다.
 ```
 
 ## Local에서 실행하는 방법
@@ -51,6 +58,12 @@ $ clone https://github.com/devhwi/krphp-hubot.git
 $ npm install
 $ bin/hubot krphp
 ```
+
+## 참조 출처
+
+영감 및 몇 가지 아이디어 : 9xd bot 제작하신 qkraudghgh님의 [9xd-bot](https://github.com/qkraudghgh/9xd-bot)
+
+결정요정 : 텔레그램 봇 제작자이신 jaewoongh님의 [Telegram-bots](https://github.com/jaewoongh/telegram-bots)(김결정)
 
 ## 문의사항 및 건의사항
 
