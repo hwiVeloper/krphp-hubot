@@ -52,10 +52,13 @@ checkKeywordAndGetResponse = (text, msg) ->
       i++
       continue
     return behaviors.pickOne(match, keywordList[i].parameter)
+  return
 
 # 모듈의 메인
 module.exports = (robot) =>
   robot.hear /(.*)/i, (msg) ->
     # 들어온 메세지
     message = msg.match['input']
-    msg.send "`결정요정` : " + checkKeywordAndGetResponse(message, msg)
+    result = checkKeywordAndGetResponse(message, msg)
+    if result != undefined
+      msg.send "`결정요정` : " + result
