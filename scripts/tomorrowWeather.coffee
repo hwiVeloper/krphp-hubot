@@ -53,11 +53,11 @@ getWeather = (msg, geoCode, location) ->
       tomorrowMinTmp = Math.floor(response.weather.summary[0].tomorrow.temperature.tmin)
 
       additionalMsg = switch tomorrowSkyCode
-        when "SKY_M01", "SKY_M02" then "'날씨 최고!'"
-        when "SKY_M03", "SKY_M04" then "'하늘이 우중충하겠어요..'"
-        when "SKY_M05" then "'우산 챙기세요!'"
-        when "SKY_M06" then "'눈길 조심하세요!'"
-        when "SKY_M07" then "'땅이 질척거리겠군요'"
+        when "SKY_M01", "SKY_M02" then "`날씨 최고!`"
+        when "SKY_M03", "SKY_M04" then "`하늘이 우중충하겠어요..`"
+        when "SKY_M05" then "`우산 챙기세요!`"
+        when "SKY_M06" then "`눈길 조심하세요!`"
+        when "SKY_M07" then "`땅이 질척거리겠군요`"
         else "?"
       # time = moment().add(9, 'h').format('MM월 DD일 HH시')
       msg.send "내일의 날씨입니다.:wink:\n#{city} #{county}의 하늘은 '#{tomorrowSky}'입니다.\n#{additionalMsg}\n최저 기온은 #{tomorrowMinTmp}도씨, 최고 기온은 #{tomorrowMaxTmp}도씨 되겠습니다.\n감사합니다:hugging_face:"
