@@ -15,6 +15,7 @@ handleIrregulars = (text) ->
       i++
       continue
     return if match.length > 1 then text.replace regex, '$1' + irregularTable[i].fix else text.replace regex, irregularTable[i].fix
+  text
 
 class Behaviors
   pickOne: (matchResult, list) ->
@@ -28,8 +29,9 @@ class Behaviors
       options = optionText.split(' ')
     return options[Math.floor(Math.random() * options.length)].trim()
 
-  # fallback: ->
-  #   return Math.random() < 0.2 ? fallbackTexts[Math.floor(Math.random() * fallbackTexts.length)] : null
+  # 마지막이라서 알아서 return 되는듯?
+  fallback: ->
+    if Math.random() < 0.2 then fallbackTexts[Math.floor(Math.random() * fallbackTexts.length)] else null
 
 checkKeywordAndGetResponse = (text, msg) ->
   behaviors = new Behaviors
