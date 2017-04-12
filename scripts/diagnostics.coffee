@@ -6,4 +6,4 @@ module.exports = (robot) ->
     msg.send "나 살아있다. 걱정마 :wink:"
 
   robot.respond /모두소환/i, (msg) ->
-    msg.send "<@everyone> 모두 모여라"
+    msg.send "<@channel> 모두 모여라"
