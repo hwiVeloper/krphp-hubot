@@ -8,4 +8,4 @@ module.exports = (robot) ->
   robot.respond /채널리스트/i, (msg) ->
     msg.send "<#C4BD72T8S|깃헙프로젝트>\n"
   robot.respond /하오님 불러줘/i, (msg) ->
-    msg.send "<!haohao> 응답하세요."
+    msg.send "<@haohao> 응답하세요."
