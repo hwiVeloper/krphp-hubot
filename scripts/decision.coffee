@@ -31,7 +31,7 @@ class Behaviors
 
   # 마지막이라서 알아서 return 되는듯?
   fallback: ->
-    if Math.random() < 0.2 then return fallbackTexts[Math.floor(Math.random() * fallbackTexts.length)] else return null
+    if Math.random() < 1 then fallbackTexts[Math.floor(Math.random() * fallbackTexts.length)] else null
 
 checkKeywordAndGetResponse = (text, msg) ->
   behaviors = new Behaviors
@@ -53,8 +53,7 @@ checkKeywordAndGetResponse = (text, msg) ->
     if match == null || match == false
       i++
       continue
-    return behaviors.pickOne(match, keywordList[i].parameter)
-  return
+    return behaviors[keywordList[i].behavior](match, keywordList[i].parameter)
 
 # 모듈의 메인
 module.exports = (robot) =>
