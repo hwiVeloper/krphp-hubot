@@ -31,7 +31,7 @@ class Behaviors
 
   # 마지막이라서 알아서 return 되는듯?
   fallback: ->
-    if Math.random() < 0.2 then fallbackTexts[Math.floor(Math.random() * fallbackTexts.length)] else null
+    if Math.random() < 0.2 then return fallbackTexts[Math.floor(Math.random() * fallbackTexts.length)] else return null
 
 checkKeywordAndGetResponse = (text, msg) ->
   behaviors = new Behaviors
