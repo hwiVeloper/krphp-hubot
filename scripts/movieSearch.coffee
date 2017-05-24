@@ -31,5 +31,5 @@ getResult = (msg, keyword) ->
         if result.items.length-1 != i
           message += "\n"
       message = message.replace /\<b>/g, '*'
-      message = message.replace /\<\/b>/g, '*'
+      message = message.replace /\<\/b>/g, '* '
       msg.send(message)
