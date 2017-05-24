@@ -1,15 +1,18 @@
+[heroku]: http://www.heroku.com
+[hubot]: http://hubot.github.com
+[krphp-dev]: https://krphp-dev.slack.com
+[waffle]: https://waffle.io/hwiVeloper/krphp-hubot/join
+
 # krphp hubot
+
 [![Slack](https://img.shields.io/badge/Slack-krphp--dev-blue.svg)](https://krphp-dev.slack.com)
 [![Travis](https://img.shields.io/travis/rust-lang/rust.svg)]()
+[![Slack](https://img.shields.io/badge/suggestion-waffle-red.svg)][waffle]
 
 krphp-dev는 한국 php 개발자 모임 슬랙 그룹입니다. 이 [Hubot][hubot]은 슬랙 그룹을 위해 만들어졌습니다. 심심풀이로 만들어보았습니다.
 [Heroku][heroku]에 빌드하여 작동하고 있습니다.
 
 [krphp-dev Slack][krphp-dev]
-
-[heroku]: http://www.heroku.com
-[hubot]: http://hubot.github.com
-[krphp-dev]: https://krphp-dev.slack.com
 
 ## 권장사항
 
@@ -52,6 +55,9 @@ ex) 오늘밤 게임할까 말까? => 해, 하지마 등의 답을 준다.
 
 # 미세먼지
 미세먼지! <지역명>
+
+# 영화검색 (Naver API)
+영화검색! <검색어>
 ```
 
 ## Local에서 실행하는 방법
@@ -73,3 +79,5 @@ $ bin/hubot krphp
 Issues 에 건의하시거나 zziller03@gmail.com 로 문의 바랍니다.
 
 Slack 멤버는 톡방 또는 Slack 채널에서 건의해주셔도 됩니다 :)
+
+[waffle에서 건의하기][waffle]
