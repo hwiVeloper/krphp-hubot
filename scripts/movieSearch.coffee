@@ -2,7 +2,7 @@
 http = require 'http'
 moment = require 'moment'
 q = require 'q'
-config = require '../config.json'
+config = require '../config.js'
 
 # weather api
 clientId = config.naver.clientId
@@ -24,7 +24,6 @@ getResult = (msg, keyword) ->
     })
     .get() (err, res, body) ->
       result = JSON.parse(body)
-      console.log("log =========" + result.items.length)
       message = ""
       for i in [0...result.items.length] by 1
         message += "#{result.items[i].title} | 연도 : `#{result.items[i].pubDate}` | 평점 : `#{result.items[i].userRating}` | 링크 : <#{result.items[i].link}>"
