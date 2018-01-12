@@ -6,10 +6,10 @@ module.exports = (robot) ->
     msg.send "나 살아있다. 걱정마 :wink:"
 
   robot.hear /채널\S?리스트/i, (msg) ->
-    msg.send "---------- krphp-dev 채널리스트 ----------\n
-<#C47JUSU86|메인채팅방> : 디폴트 방입니다.\n
-<#C4A2GEUDN|조잘조잘> : 맘껏 떠드는 곳입니다.\n
-<#C46U8PYCA|랜덤채널> : 솔직히 뭐하는 곳인지 잘 모르겠습니다.\n
-<#C4BD72T8S|깃헙프로젝트> : 프로젝트 관련 깃헙 방입니다."
+    msg.send "---------- IDUCS 채널리스트 ----------\n
+<#C8M3G670E|공지> : 공지사항 채널입니다.\n
+<#C8L87RMPE|수다> : 기본 채팅방입니다.\n
+<#C8KH8FVRN|웹개발자> : 웹개발자 채널입니다.\n
+<#C8L50NKGB|앱개발자> : 앱개발자 채널입니다.\n"
   robot.respond /모두\s?소환/i, (msg) ->
     msg.send "<!channel> 응답하세요."

@@ -41,19 +41,19 @@ module.exports = (robot) ->
 #   -> robot.messageRoom '#메인채팅방', ":alarm_clock: #{moment().format('a h시')}를 알립니다."
 # # 0시에 goodNightJob
 goodNight = (robot) ->
-  -> robot.messageRoom '#메인채팅방', '오늘 하루 고생 많았어요. 잘자요~ :sleeping:'
+  -> robot.messageRoom '#_수다', '오늘 하루 고생 많았어요. 잘자요~ :sleeping:'
 # 일요일 0시에 goodNightSunday
 goodNightSunday = (robot) ->
-  -> robot.messageRoom '#메인채팅방', '일요일이 끝났습니다...:cry: 월요일을 준비하며 잘자요 여러분..'
+  -> robot.messageRoom '#_수다', '일요일이 끝났습니다...:cry: 월요일을 준비하며 잘자요 여러분..'
 # 점심시간에 lunchTimeJob
 lunchTime = (robot) ->
-  -> robot.messageRoom '#메인채팅방', '점심시간입니다! 맛점하세요 :heart_eyes::meat_on_bone:'
+  -> robot.messageRoom '#_수다', '점심시간입니다! 맛점하세요 :heart_eyes::meat_on_bone:'
 # 점심 먹고 메뉴 추천
 recommendMenu = (robot) ->
-  -> robot.messageRoom '#메인채팅방', '점심 맛있게 드셨나요? :kissing_cat: `메뉴추가 메뉴이름`을 통해 메뉴판을 채워주세요!'
+  -> robot.messageRoom '#_수다', '점심 맛있게 드셨나요? :kissing_cat: `메뉴추가 메뉴이름`을 통해 메뉴판을 채워주세요!'
 # 출근시간에 helloOfficeJob
 helloOffice = (robot) ->
-  -> robot.messageRoom '#메인채팅방', '오늘 하루도 화이팅! :wink:'
+  -> robot.messageRoom '#_수다', '오늘 하루도 화이팅! :wink:'
 # 불금 itsFriday
 itsFriday = (robot) ->
-  -> robot.messageRoom '#메인채팅방', ':fire::fire::fire: 불금입니다. 오예! 즐거운 주말 되세요! :fire::fire::fire:'
+  -> robot.messageRoom '#_수다', ':fire::fire::fire: 불금입니다. 오예! 즐거운 주말 되세요! :fire::fire::fire:'
