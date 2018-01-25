@@ -1,4 +1,6 @@
 node_modules
 .DS_Store*
 .hubot_history
-config.jsonnode_modules
+config.json
+node_modules
+package-lock.json

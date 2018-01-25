@@ -5,7 +5,8 @@ var prodConfig = {
     "key": process.env.WEATHER_KEY
   },
   "firebase": {
-    "secret": process.env.FIREBASE_SECRET
+    "secret": process.env.FIREBASE_SECRET,
+    "url": process.env.FIREBASE_URL
   },
   "naver": {
     "clientId": process.env.NAVER_CLIENT_ID,

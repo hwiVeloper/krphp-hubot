@@ -24,8 +24,9 @@ module.exports = (robot) ->
 
   getMenuTable = (msg) ->
     fb.once "value", (data) ->
-      objectKeys = Object.keys(data.val())
-      msg.send "----- 메뉴리스트 -----"
-      data.forEach (data)->
-        msg.send "#{data.val()}"
-      msg.send "----------------------"
+      message = ""
+      for key,value of data.val()
+        message += "\n#{value}\n"
+      msg.send "----- 메뉴리스트 -----\n
+                    #{message}\n
+      ----------------------"
