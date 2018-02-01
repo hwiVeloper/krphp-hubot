@@ -4,6 +4,7 @@
     "key": "ba0107a9-f37f-3aee-b329-d4d13c5f098d"
   },
   "firebase": {
+    "url": "https://krphp-hubot.firebaseio.com/",
     "secret": "ts0vwMhNeSUFCWfd5X2y5fzbEydcYMSgvVOKyoAz"
   },
   "naver": {
