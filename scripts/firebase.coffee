@@ -1,6 +1,6 @@
 Firebase = require 'firebase'
 FirebaseTokenGenerator = require 'firebase-token-generator'
-config = require '../config.js'
+config = require '../config.json'
 FIREBASE_URL = config.firebase.url
 FIREBASE_SECRET = config.firebase.secret
 

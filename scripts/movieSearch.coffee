@@ -2,7 +2,7 @@
 http = require 'http'
 moment = require 'moment'
 q = require 'q'
-config = require '../config.js'
+config = require '../config.json'
 
 # weather api
 clientId = config.naver.clientId
