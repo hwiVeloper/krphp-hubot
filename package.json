@@ -26,6 +26,6 @@
     "firebase-token-generator": "^2.0.0"
   },
   "engines": {
-    "node": "0.10.x"
+    "node": "0.11.x"
   }
 }
