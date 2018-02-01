@@ -31,7 +31,7 @@
     "hubot": "2.x"
   },
   "engines": {
-    "node": "4.4.x"
+    "node": ">=4.5"
   },
   "devDependencies": {
     "coveralls": "^2.11.12"
