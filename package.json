@@ -1,11 +1,13 @@
 {
-  "name": "krphp",
+  "name": "krphp-hubot",
   "version": "0.0.0",
   "private": true,
-  "author": "devhwi",
+  "author": "hwiVeloper",
   "description": "krphp-dev group's hubot",
   "dependencies": {
-    "cron": "1.1.0",
+    "cheerio": "^0.22.0",
+    "coffee-script": "^1.10.0",
+    "cron": "1.2.1",
     "hubot": "^2.19.0",
     "hubot-diagnostics": "0.0.1",
     "hubot-google-images": "^0.2.6",
@@ -25,7 +27,13 @@
     "firebase": "^2.2.7",
     "firebase-token-generator": "^2.0.0"
   },
+  "peerDependencies": {
+    "hubot": "2.x"
+  },
   "engines": {
-    "node": "0.11.x"
+    "node": "4.4.x"
+  },
+  "devDependencies": {
+    "coveralls": "^2.11.12"
   }
 }
