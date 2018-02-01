@@ -1,6 +1,6 @@
 {
   "name": "krphp-hubot",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
   "author": "hwiVeloper",
   "description": "krphp-dev group's hubot",
@@ -8,7 +8,10 @@
     "cheerio": "^0.22.0",
     "coffee-script": "^1.10.0",
     "cron": "1.2.1",
+    "firebase": "^2.2.7",
+    "firebase-token-generator": "^2.0.0",
     "hubot": "^2.19.0",
+    "hubot-cron": ">= 0.1.0",
     "hubot-diagnostics": "0.0.1",
     "hubot-google-images": "^0.2.6",
     "hubot-google-translate": "^0.2.0",
@@ -22,10 +25,7 @@
     "hubot-slack": "^4.3.2",
     "moment": "^2.17.1",
     "q": "^1.4.1",
-    "hubot-cron": ">= 0.1.0",
-    "sugar": "^1.4.1",
-    "firebase": "^2.2.7",
-    "firebase-token-generator": "^2.0.0"
+    "sugar": "^1.4.1"
   },
   "peerDependencies": {
     "hubot": "2.x"
