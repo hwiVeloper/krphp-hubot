@@ -1,14 +1,14 @@
 {
   "weather": {
     "version": 1,
-    "key": "ba0107a9-f37f-3aee-b329-d4d13c5f098d"
+    "key": "sk-planet weather api key"
   },
   "firebase": {
-    "url": "https://krphp-hubot.firebaseio.com/",
-    "secret": "ts0vwMhNeSUFCWfd5X2y5fzbEydcYMSgvVOKyoAz"
+    "url": "https://<app-name>.firebaseio.com/",
+    "secret": "firebase-secret"
   },
   "naver": {
-    "clientId": "AweOb9naCdltS1HMtobI",
-    "clientSecret": "bBPOcLCyCb"
+    "clientId": "naver app client id",
+    "clientSecret": "naver app client secret"
   }
 }

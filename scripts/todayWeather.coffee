@@ -2,7 +2,7 @@
 http = require 'http'
 moment = require 'moment'
 q = require 'q'
-config = require '../config.json'
+config = require '../config.js'
 
 # weather api
 weather_api_key = config.weather.key
