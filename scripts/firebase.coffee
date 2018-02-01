@@ -1,8 +1,7 @@
 Firebase = require 'firebase'
 FirebaseTokenGenerator = require 'firebase-token-generator'
-config = require '../config.json'
-
-FIREBASE_URL = "https://krphp-hubot.firebaseio.com/"
+config = require '../config.js'
+FIREBASE_URL = config.firebase.url
 FIREBASE_SECRET = config.firebase.secret
 
 module.exports = (robot, ref) ->

@@ -2,14 +2,14 @@
 http = require 'http'
 moment = require 'moment'
 q = require 'q'
-config = require '../config.json'
+config = require '../config.js'
 
 # weather api
 weather_api_key = config.weather.key
 weather_version = config.weather.version
 
 module.exports = (robot) ->
-  robot.respond /오늘의날씨 (.*)$/i, (msg) ->
+  robot.hear /오늘의날씨 (.*)$/i, (msg) ->
     location = decodeURIComponent(unescape(msg.match[1]))
     getGeocode(msg, location)
     .then (geoCode) ->

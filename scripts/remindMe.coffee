@@ -83,7 +83,6 @@ module.exports = (robot) ->
   robot.respond /(((?!(에)).)*)\s*에\s*(((?!(\s*(가라고|이라고|하라고|라고))).)*)\s*(가라고|이라고|하라고|라고)\s*알려줘/i, (msg) ->
     time = msg.match[1]
     action = msg.match[4]
-    console.log(time, action)
     # Compute the actual time using magic.
     Date.setLocale 'ko'
     parsedDate = Date.create time
